@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    background-color: #ffffff;
+}
+
+h1, h2 {
+    font-size: 1.8rem;
+}
+
+header {
+    background-color: whitesmoke;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.search-bar button, .cart button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.search-bar img, .cart img {
+    width: 25px;
+    height: 25px;
+}
+
+.search-bar button, .cart button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+main {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+
+nav {
+    width: 200px;
+    background-color: rgb(229, 218, 231);
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: -200px;
+    transition: left 0.3s ease;
+}
+
+nav.open {
+    left: 0;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
+    color: rgb(114, 16, 153);
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+nav ul li a:hover {
+    color: #c421ae;
+}
+
+.productos-destacados {
+    margin-left: 0;
+    padding: 20px;
+    flex: 1;
+    transition: margin-left 0.3s ease;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: whitesmoke;
+    color: black;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-social a {
+    margin: 0 15px;
+    display: inline-block;
+}
+
+.footer-social img {
+    width: 30px;
+    height: 30px;
+}
+
+@media (max-width: 768px) {
+    .productos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    nav {
+        width: 100%;
+        position: relative;
+        height: auto;
+        left: 0;
+    }
+
+    .productos-destacados {
+        margin-left: 0;
+    }
+
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu-toggle button {
+        font-size: 2rem;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        color: #333;
+    }
+
+    .search-bar {
+        display: none; 
+    }
+
+    .cart {
+        display: none;
+    }
+}
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-button a img {
+    width: 40px;
+    height: 40px;
+}
+
+.whatsapp-button:hover {
+    background-color: #13e143;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
