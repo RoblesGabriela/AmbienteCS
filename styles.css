@@ -31,6 +31,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    padding-bottom:  10px;
 }
 
 .header-container {
@@ -154,6 +155,8 @@ nav {
     left: -200px;
     transition: left 0.3s ease;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 500;
+    margin-top: 100px;
 }
 
 nav.open {
