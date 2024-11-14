@@ -35,9 +35,23 @@ header {
 .header-container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.menu-toggle {
+    order: -1;
+    margin-right: 10px; 
+}
+
+.menu-toggle button {
+    font-size: 2rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #333;
 }
 
 .search-bar {
