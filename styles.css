@@ -13,7 +13,8 @@ body {
     color: #333;
 }
 
-h1, h2 {
+h1,
+h2 {
     font-size: 1.6rem;
     font-weight: 500;
     color: #2c2c2c;
@@ -22,7 +23,7 @@ h1, h2 {
 header {
     background-color: #ffffff;
     color: #333;
-    padding: 15px 20px;
+    padding: 20px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,14 +37,14 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    max-width: 1200px;
+    width: 300%;
+    max-width: 1500px;
     margin: 0 auto;
 }
 
 .menu-toggle {
     order: -1;
-    margin-right: 10px; 
+    margin-right: 10px;
 }
 
 .menu-toggle button {
@@ -52,6 +53,16 @@ header {
     border: none;
     cursor: pointer;
     color: #333;
+}
+
+.link-tienda {
+    text-decoration: none;
+    color: #128C7E;
+}
+
+.link-tienda:hover h1 {
+    color: #2c2c2c;
+    text-decoration: bold;
 }
 
 .search-bar {
@@ -252,7 +263,7 @@ footer {
     }
 
     .search-bar {
-        display: none; 
+        display: none;
     }
 
     .cart {
