@@ -15,7 +15,7 @@ body {
 
 h1,
 h2 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     font-weight: 500;
     color: #2c2c2c;
 }
@@ -280,7 +280,6 @@ footer {
     right: 20px;
     border-radius: 50%;
     padding: 15px;
-    background-color: #25D366;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease;
 }
@@ -291,5 +290,5 @@ footer {
 }
 
 .whatsapp-button:hover {
-    background-color: #128C7E;
+    background-color: #25D366;
 }
