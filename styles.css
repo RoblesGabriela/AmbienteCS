@@ -5,26 +5,31 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     display: flex;
     height: 100vh;
     flex-direction: column;
-    background-color: #ffffff;
+    background-color: #f3f4f6;
+    color: #333;
 }
 
 h1, h2 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #2c2c2c;
 }
 
 header {
-    background-color: whitesmoke;
-    color: white;
-    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #333;
+    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: sticky;
     top: 0;
+    z-index: 1000;
 }
 
 .header-container {
@@ -38,51 +43,92 @@ header {
 .search-bar {
     display: flex;
     align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 4px;
 }
 
 .search-bar input {
     padding: 8px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-right: 10px;
+    font-size: 0.9rem;
+    border: none;
+    outline: none;
 }
 
-.search-bar button, .cart button {
+.search-bar button {
     background-color: transparent;
     border: none;
     cursor: pointer;
 }
 
-.search-bar img, .cart img {
+.search-bar img {
+    width: 20px;
+    height: 20px;
+}
+
+.cart {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.cart button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.cart img {
     width: 25px;
     height: 25px;
 }
 
-.search-bar button, .cart button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
+.cart-empty-text {
+    text-align: center;
+    color: #666;
+    font-size: 0.9rem;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.button-text_contained {
+    background-color: #f36;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    font-weight: bold;
+    width: 100%;
+}
+
+.button-text_contained:hover {
+    background-color: #e53935;
 }
 
 main {
     display: flex;
     flex: 1;
     padding: 20px;
+    background-color: #f3f4f6;
     transition: margin-left 0.3s ease;
 }
 
 nav {
     width: 200px;
-    background-color: rgb(229, 218, 231);
+    background-color: #ffffff;
     padding: 20px;
     position: fixed;
     height: 100%;
     top: 0;
     left: -200px;
     transition: left 0.3s ease;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
 nav.open {
@@ -94,17 +140,19 @@ nav ul {
 }
 
 nav ul li {
-    margin: 10px 0;
+    margin: 15px 0;
 }
 
 nav ul li a {
-    color: rgb(114, 16, 153);
+    color: #555;
     text-decoration: none;
     font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.2s;
 }
 
 nav ul li a:hover {
-    color: #c421ae;
+    color: #f36;
 }
 
 .productos-destacados {
@@ -123,18 +171,26 @@ nav ul li a:hover {
 .producto img {
     width: 100%;
     height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.producto img:hover {
+    transform: scale(1.05);
 }
 
 footer {
-    background-color: whitesmoke;
-    color: black;
+    background-color: #ffffff;
+    color: #333;
     text-align: center;
     padding: 20px 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .footer-social a {
     margin: 0 15px;
     display: inline-block;
+    color: #333;
 }
 
 .footer-social img {
@@ -196,7 +252,9 @@ footer {
     right: 20px;
     border-radius: 50%;
     padding: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    background-color: #25D366;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
 }
 
 .whatsapp-button a img {
@@ -205,6 +263,5 @@ footer {
 }
 
 .whatsapp-button:hover {
-    background-color: #13e143;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    background-color: #128C7E;
 }
