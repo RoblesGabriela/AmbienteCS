@@ -292,3 +292,181 @@ footer {
 .whatsapp-button:hover {
     background-color: #25D366;
 }
+
+
+/* SOBRENOSOTROS*/
+.page-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* SOBRENOSOTROS*/
+.about-us {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+    background-color: #ffffff;
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-us h2 {
+    font-size: 1.2rem;
+    color: #128C7E;
+    grid-column: span 1;
+    text-align: center;
+    margin-bottom: 2px;
+}
+
+.about-us p {
+    font-size: 0.9rem;
+    line-height: 1;
+    color: #666;
+    margin: 0;
+}
+
+/* UBICACIÓN*/
+.location {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.location h2 {
+    font-size: 1.2rem;
+    color: #128C7E;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map-container iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 250px;
+    border: none;
+    border-radius: 8px;
+}
+
+/* PREGUNTASFRECUENTES*/
+.faq {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.faq h2 {
+    font-size: 1.2rem;
+    color: #128C7E;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.faq-item {
+    background-color: #f9f9f9;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item h3 {
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.faq-item p {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+/* SUSCRPCION*/
+.subscribe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.subscribe h2 {
+    font-size: 1.2rem;
+    color: #128C7E;
+    margin-bottom: 8px;
+}
+
+.subscribe p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 12px;
+}
+
+.subscribe-form {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.subscribe-form input[type="email"] {
+    padding: 8px;
+    font-size: 0.9rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    flex: 1;
+}
+
+.subscribe-form button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+    color: #ffffff;
+    background-color: #f36;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe-form button:hover {
+    background-color: #e53935;
+}
+
+
+@media (max-width: 768px) {
+    .about-us, .faq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .map-container iframe {
+        height: 200px;
+    }
+
+    .subscribe-form {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
