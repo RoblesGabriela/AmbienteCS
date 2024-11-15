@@ -470,3 +470,114 @@ footer {
         gap: 10px;
     }
 }
+/*EMPLEADOS*/
+.page-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.registro-empleados {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.lista-empleados table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.lista-empleados th, .lista-empleados td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.lista-empleados th {
+    background-color: #f3f4f6;
+    color: #333;
+    font-weight: bold;
+}
+
+.lista-empleados td {
+    color: #666;
+}
+
+.button-text_contained {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #128C7E;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button-text_contained:hover {
+    background-color: #0a6e58;
+}
+
+.empleados-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.registro-container,
+.lista-container {
+    width: 45%;
+}
+
+.registro-container {
+    margin-right: 5%;
+}
+h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.form-group label,
+.lista-empleados th,
+.lista-empleados td {
+    font-size: 0.9rem;
+}
+
+.form-group input,
+.button-text_contained {
+    font-size: 0.85rem;
+    padding: 6px;
+}
+
+.lista-empleados table {
+    font-size: 0.85rem;
+}
+
+.lista-empleados th,
+.lista-empleados td {
+    padding: 6px;
+}
