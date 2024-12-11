@@ -581,3 +581,19 @@ h2 {
 .lista-empleados td {
     padding: 6px;
 }
+
+/* Estilos para el botón "Agregar al Carrito" */
+.btn-agregar {
+    background-color: #007bff; /* Color de fondo azul */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
+}
+
+.btn-agregar:hover {
+    background-color: #0056b3; /* Color de fondo al pasar el mouse */
+}
