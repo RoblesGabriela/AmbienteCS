@@ -19,30 +19,14 @@
 
             <a href="index.html" class="link-tienda">
                 <h1>Chacón Store</h1>
-
             </a>
 
-            <div class="search-bar d-flex align-items-center">
-                <input type="text" class="form-control me-2" placeholder="Buscar productos...">
-                <button class="btn btn-primary">
-                    <img src="image/lupa.png" alt="Buscar">
+            <div class="cart">
+                <button class="btn btn-primary" onclick="abrirCarrito()">
+                    <img src="image/carrito.png" alt="Carrito">
                 </button>
             </div>
-            <div class="cart">
-                <button><img src="image/carrito.png" alt="Carrito"></button>
-                <div class="cart-empty-text">
-                    <span class="cart-empty-title">¡Hay un carrito que llenar!</span>
-                    <span class="cart-empty-subtitle">
-                        Actualmente no tenés productos en tu carrito.
-                    </span>
-                    <a href="https://www.chaconstore.cr/">
-                        <button class="button-text_contained primary full-width">
-                            Buscar productos
-                        </button>
-                    </a>
-                </div>
-
-            </div>
+        </div>
     </header>
 
     <main>
@@ -80,170 +64,14 @@
                         alt="iPhone">
                     <p>Precio: $199.99</p>
                     <p>Descripción: iPhone con cámara de alta resolución y gran rendimiento.</p>
+                    <button class="btn-agregar" onclick="agregarAlCarrito('iPhone', 199.99)">Agregar al Carrito</button>
+                </div>
+            </div>
         </section>
-        
-        <script>
-        function agregarAlCarrito(nombre, precio) {
-            alert(`Producto agregado al carrito: ${nombre} - Precio: $${precio}`);
-            // Aquí puedes agregar la lógica para manejar el carrito, como almacenar en un array o en localStorage
-        }
-        
-        function handleSearch(event) {
-            event.preventDefault(); // Evita que el formulario se envíe de la manera tradicional
-            const query = document.getElementById('search-input').value.toLowerCase();
-            const productos = document.querySelectorAll('.producto');
-        
-            // Ocultar todos los productos
-            productos.forEach(producto => {
-                producto.style.display = 'none'; // Oculta el producto
-            });
-        
-            // Mostrar solo el producto que coincide con la búsqueda
-            let encontrado = false;
-            productos.forEach(producto => {
-                if (producto.getAttribute('data-nombre') === query) {
-                    producto.style.display = 'block'; // Muestra el producto
-                    encontrado = true;
-                }
-            });
-        
-            if (!encontrado) {
-                alert('Producto no encontrado.'); // Mensaje si no se encuentra el producto
-            }
-        }
-        </script>
     </main>
 
-    <footer>
+    <footer> 
         <div class="footer-social">
             <a href="#"><img src="image/facebook.png" alt="Facebook"></a>
-            <a href="https://www.instagram.com/chacon_store/"><img src="image/instagram.png" alt="Instagram"></a>
-        </div>
-        <p>&copy; 2024 Todos los derechos reservados.</p>
-    </footer>
-
-    <div class="whatsapp-button">
-        <a href="https://wa.me/1234567890" target="_blank">
-            <img src="image/whatsapp.png" alt="WhatsApp">
-        </a>
-    </div>
-
-    <script src="acciones.js"></script>
-
-    <div class="search-bar d-flex align-items-center">
-        <form id="search-form" onsubmit="return handleSearch(event);">
-            <input type="text" class="form-control me-2" id="search-input" placeholder="Buscar productos..." required>
-            <button type="submit" class="btn btn-primary">
-                <img src="image/lupa.png" alt="Buscar">
-            </button>
-        </form>
-    </div><div class="search-bar d-flex align-items-center">
-        <form id="search-form" onsubmit="return handleSearch(event);">
-            <input type="text" class="form-control me-2" id="search-input" placeholder="Buscar productos..." required>
-            <button type="submit" class="btn btn-primary">
-                <img src="image/lupa.png" alt="Buscar">
-            </button>
-        </form>
-    </div>
-
-    <script>
-        function handleSearch(event) {
-            event.preventDefault(); // Evita que el formulario se envíe de la manera tradicional
-            const query = document.getElementById('search-input').value.toLowerCase();
-        
-            // Aquí puedes definir las redirecciones según el producto buscado
-            if (query.includes('teléfono')) {
-                window.location.href = 'telefonos.html'; // Redirige a la página de teléfonos
-            } else if (query.includes('computadora')) {
-                window.location.href = 'computadoras.html'; // Redirige a la página de computadoras
-            } else if (query.includes('audífono')) {
-                window.location.href = 'audifonos.html'; // Redirige a la página de audífonos
-            } else {
-                alert('Producto no encontrado.'); // Mensaje si no se encuentra el producto
-            }
-        }
-        </script><script>
-        function handleSearch(event) {
-            event.preventDefault(); // Evita que el formulario se envíe de la manera tradicional
-            const query = document.getElementById('search-input').value.toLowerCase();
-        
-            // Aquí puedes definir las redirecciones según el producto buscado
-            if (query.includes('teléfono')) {
-                window.location.href = 'telefonos.html'; // Redirige a la página de teléfonos
-            } else if (query.includes('computadora')) {
-                window.location.href = 'computadoras.html'; // Redirige a la página de computadoras
-            } else if (query.includes('audífono')) {
-                window.location.href = 'audifonos.html'; // Redirige a la página de audífonos
-            } else {
-                alert('Producto no encontrado.'); // Mensaje si no se encuentra el producto
-            }
-        }
-        </script>
-<!-- Botón para abrir el carrito -->
-<button id="ver-carrito" class="btn btn-primary" onclick="abrirCarrito()">Ver Carrito</button>
-
-<!-- Modal del Carrito -->
-<div id="carrito-modal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="cerrarCarrito()">&times;</span>
-        <h2>Carrito de Compras</h2>
-        <div id="lista-carrito"></div>
-        <button class="btn btn-primary" onclick="cerrarCarrito()">Cerrar</button>
-    </div>
-</div>
-<script>
-    let carrito = []; // Array para almacenar los productos del carrito
-    
-    function agregarAlCarrito(nombre, precio) {
-        carrito.push({ nombre, precio }); // Agregar producto al carrito
-        alert(`Producto agregado al carrito: ${nombre} - Precio: $${precio}`);
-    }
-    
-    function abrirCarrito() {
-        const listaCarrito = document.getElementById('lista-carrito');
-        listaCarrito.innerHTML = ''; // Limpiar la lista antes de mostrar
-    
-        // Mostrar productos en el carrito
-        carrito.forEach(producto => {
-            const item = document.createElement('div');
-            item.textContent = `${producto.nombre} - Precio: $${producto.precio}`;
-            listaCarrito.appendChild(item);
-        });
-    
-        document.getElementById('carrito-modal').style.display = 'block'; // Mostrar el modal
-    }
-    
-    function cerrarCarrito() {
-        document.getElementById('carrito-modal').style.display = 'none'; // Ocultar el modal
-    }
-    
-    // Manejo de búsqueda (sin cambios)
-    function handleSearch(event) {
-        event.preventDefault(); // Evita que el formulario se envíe de la manera tradicional
-        const query = document.getElementById('search-input').value.toLowerCase();
-        const productos = document.querySelectorAll('.producto');
-    
-        // Ocultar todos los productos
-        productos.forEach(producto => {
-            producto.style.display = 'none'; // Oculta el producto
-        });
-    
-        // Mostrar solo el producto que coincide con la búsqueda
-        let encontrado = false;
-        productos.forEach(producto => {
-            if (producto.getAttribute('data-nombre') === query) {
-                producto.style.display = 'block'; // Muestra el producto
-                encontrado = true;
-            }
-        });
-    
-        if (!encontrado) {
-            alert('Producto no encontrado.'); // Mensaje si no se encuentra el producto
-        }
-    }
-    </script>
-
-
-</body>
-
-</html>
+            <a href="https://www.instagram.com/chacon
+            </footer>
