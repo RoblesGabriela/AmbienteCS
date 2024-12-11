@@ -80,16 +80,6 @@
                         alt="iPhone">
                     <p>Precio: $199.99</p>
                     <p>Descripción: iPhone con cámara de alta resolución y gran rendimiento.</p>
-                    <button class="btn-agregar" onclick="agregarAlCarrito('iPhone', 199.99)">Agregar al Carrito</button>
-                </div>
-                <div class="producto" data-nombre="humificadores">
-                    <img src="https://tiendasishop.com/media/catalog/product/n/h/nha_a600.jpg?optimize=high&bg-color=255,255,255&fit=bounds&height=700&width=700&canvas=700:700"
-                        alt="Humificadores">
-                    <p>Precio: $149.99</p>
-                    <p>Descripción: Humificadores para mejorar la calidad del aire en tu hogar.</p>
-                    <button class="btn-agregar" onclick="agregarAlCarrito('Humificadores', 149.99)">Agregar al Carrito</button>
-                </div>
-            </div>
         </section>
         
         <script>
@@ -201,7 +191,57 @@
         <button class="btn btn-primary" onclick="cerrarCarrito()">Cerrar</button>
     </div>
 </div>
-
+<script>
+    let carrito = []; // Array para almacenar los productos del carrito
+    
+    function agregarAlCarrito(nombre, precio) {
+        carrito.push({ nombre, precio }); // Agregar producto al carrito
+        alert(`Producto agregado al carrito: ${nombre} - Precio: $${precio}`);
+    }
+    
+    function abrirCarrito() {
+        const listaCarrito = document.getElementById('lista-carrito');
+        listaCarrito.innerHTML = ''; // Limpiar la lista antes de mostrar
+    
+        // Mostrar productos en el carrito
+        carrito.forEach(producto => {
+            const item = document.createElement('div');
+            item.textContent = `${producto.nombre} - Precio: $${producto.precio}`;
+            listaCarrito.appendChild(item);
+        });
+    
+        document.getElementById('carrito-modal').style.display = 'block'; // Mostrar el modal
+    }
+    
+    function cerrarCarrito() {
+        document.getElementById('carrito-modal').style.display = 'none'; // Ocultar el modal
+    }
+    
+    // Manejo de búsqueda (sin cambios)
+    function handleSearch(event) {
+        event.preventDefault(); // Evita que el formulario se envíe de la manera tradicional
+        const query = document.getElementById('search-input').value.toLowerCase();
+        const productos = document.querySelectorAll('.producto');
+    
+        // Ocultar todos los productos
+        productos.forEach(producto => {
+            producto.style.display = 'none'; // Oculta el producto
+        });
+    
+        // Mostrar solo el producto que coincide con la búsqueda
+        let encontrado = false;
+        productos.forEach(producto => {
+            if (producto.getAttribute('data-nombre') === query) {
+                producto.style.display = 'block'; // Muestra el producto
+                encontrado = true;
+            }
+        });
+    
+        if (!encontrado) {
+            alert('Producto no encontrado.'); // Mensaje si no se encuentra el producto
+        }
+    }
+    </script>
 
 
 </body>
