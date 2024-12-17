@@ -132,7 +132,11 @@ header {
     font-weight: bold;
     width: 100%;
 }
+#btnBuscar{
+    color:white;
+background-color: #128C7E;
 
+}
 .button-text_contained:hover {
     background-color: #e53935;
 }
